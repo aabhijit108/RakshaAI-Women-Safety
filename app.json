@@ -9,9 +9,20 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.RakshaSafetyApp",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "location",
+          "audio",
+          "fetch"
+        ],
+        "NSMicrophoneUsageDescription": "Allow Raksha Safety to access the microphone for voice triggers.",
+        "NSSpeechRecognitionUsageDescription": "Allow Raksha Safety to analyze speech for emergency keywords."
+      }
     },
     "android": {
+      "package": "com.anonymous.RakshaSafetyApp",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -19,7 +30,18 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION",
+        "FOREGROUND_SERVICE_MICROPHONE",
+        "RECORD_AUDIO",
+        "SEND_SMS",
+        "VIBRATE"
+      ]
     },
     "web": {
       "output": "static",
@@ -38,7 +60,22 @@
             "backgroundColor": "#000000"
           }
         }
-      ]
+      ],
+      "expo-audio",
+      [
+        "expo-location",
+        {
+          "locationAlwaysPermission": "Allow Raksha Safety to use your location even in the background for your safety."
+        }
+      ],
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Allow Raksha Safety to access the microphone for voice triggers.",
+          "speechRecognitionPermission": "Allow Raksha Safety to analyze speech for emergency keywords."
+        }
+      ],
+      "expo-video"
     ],
     "experiments": {
       "typedRoutes": true,
