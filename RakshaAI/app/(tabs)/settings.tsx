@@ -167,14 +167,6 @@ export default function SettingsScreen() {
             <Text style={styles.sectionTitle}>App Preferences</Text>
           </View>
 
-          <View style={styles.preferenceItem}>
-            <View style={styles.prefLeft}>
-              <Globe size={18} color="#888" />
-              <Text style={styles.prefLabel}>Dark Mode</Text>
-            </View>
-            <Text style={styles.prefValue}>Use header toggle</Text>
-          </View>
-
           <View style={styles.divider} />
 
           <TouchableOpacity
